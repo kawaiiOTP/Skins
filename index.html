@@ -4,26 +4,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>スキン一覧 | Eternal Return</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="kaworia — Eternal Return SKIN ARCHIVE">
+
+  <title>SKIN ARCHIVE | kaworia</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <a class="logo" href="index.html">Eternal Return : SKIN ARCHIVE</a>
-    <nav>
-      <a class="nav-link active" href="index.html">スキン一覧</a>
-      <a class="nav-link" href="ranking.html">実装待ちランキング</a>
+
+  <!-- 上部固定ヘッダー -->
+  <header class="topbar">
+
+    <a class="topbar-brand" href="/" aria-label="kaworia トップ">
+      kaworia
+    </a>
+
+    <nav class="top-nav" aria-label="メインナビゲーション">
+
+      <a href="index.html" class="active">
+        <span class="material-symbols-rounded" aria-hidden="true">grid_view</span>
+        <span>SKIN LIST</span>
+      </a>
+
+      <a href="ranking.html">
+        <span class="material-symbols-rounded" aria-hidden="true">leaderboard</span>
+        <span>RANKING</span>
+      </a>
+
+      <a href="/contact/">
+        <span class="material-symbols-rounded" aria-hidden="true">mail</span>
+        <span>CONTACT</span>
+      </a>
+
     </nav>
+
   </header>
 
+
   <main class="container">
+
     <section class="page-heading">
       <p class="eyebrow">ETERNAL RETURN / COLLECTION</p>
       <h1>スキン一覧</h1>
-      <p class="description">実装スキンの実装日などが検索できます。<br>Q.シリーズはどういう基準？ A.独断と偏見です。<br>Q.未来の実装日のものって？ A.目安の日付です。基本的にズレるのでなんとなくの参考に。<br>Q.画像がないものって？ A.スキンイラストの再編作業中のものや、未来のものなどです。</p>
+
+      <p class="description">
+        実装スキンの実装日などが検索できます。<br>
+        Q.シリーズはどういう基準？ A.独断と偏見です。<br>
+        Q.未来の実装日のものって？ A.目安の日付です。基本的にズレるのでなんとなくの参考に。<br>
+        Q.画像がないものって？ A.スキンイラストの再編作業中のものや、未来のものなどです。
+      </p>
     </section>
 
+
+    <!-- 検索・絞り込み -->
     <section class="filter-panel">
+
       <label class="field">
         <span>キーワード</span>
         <input id="search" type="search"
@@ -31,6 +73,7 @@
       </label>
 
       <div class="filter-grid">
+
         <label class="field">
           <span>キャラクター</span>
           <select id="characterFilter">
@@ -66,46 +109,78 @@
             <option value="name">スキン名順</option>
           </select>
         </label>
+
       </div>
 
       <button id="resetFilters" class="button button-light"
-        type="button">条件をリセット</button>
+        type="button">
+        条件をリセット
+      </button>
+
     </section>
 
 
-<div class="result-bar">
-  <span id="resultCount">0件</span>
-  <button
-    id="loadAllButton"
-    class="button button-light load-all-button"
-    type="button"
-  >
-    すべて読み込む
-  </button>
-</div>
+    <!-- 件数・読み込み -->
+    <div class="result-bar">
+
+      <span id="resultCount">0件</span>
+
+      <button
+        id="loadAllButton"
+        class="button button-light load-all-button"
+        type="button"
+      >
+        すべて読み込む
+      </button>
+
+    </div>
 
 
-    <section id="skinGrid" class="skin-grid"
-      aria-label="スキン一覧"></section>
+    <!-- スキン一覧 -->
+    <section
+      id="skinGrid"
+      class="skin-grid"
+      aria-label="スキン一覧"
+    ></section>
+
     <p id="emptyMessage" class="empty-message" hidden>
       該当するスキンがありません。
     </p>
 
+
+    <!-- 画像拡大ダイアログ -->
     <dialog id="imageDialog" class="image-dialog">
-      <button id="closeDialog" class="dialog-close"
-        type="button" aria-label="閉じる">×</button>
+
+      <button
+        id="closeDialog"
+        class="dialog-close"
+        type="button"
+        aria-label="閉じる"
+      >×</button>
+
       <img id="fullImage" alt="">
       <p id="dialogCaption"></p>
+
     </dialog>
+
   </main>
 
-  <footer class="site-footer">
-    <p>管理：@kawaiiOTP</p>
-    <p>各情報、画像等は下記権利者様へ帰属します。</p>
-    <p>COPYRIGHT ©2020 NIMBLE NEURON CORPORATION. ALL RIGHTS RESERVED.</p>
+
+  <!-- 下部固定フッター -->
+  <footer class="bottombar">
+
+    <small>
+      kawaiiOTPが制作・管理しているEternal Returnの有志サイトです。<br>
+      <strong>引用内容/スクリーンショット/画像の権利につきましては、権利者様へ帰属します。</strong><br>
+      <strong>©2020 NIMBLE NEURON CORPORATION. ALL RIGHTS RESERVED.</strong>
+    </small>
+
   </footer>
 
+
+  <!-- JavaScript：既存のまま -->
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
+
 </body>
 </html>
