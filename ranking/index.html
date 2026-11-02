@@ -1,1 +1,92 @@
+
 <!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="kaworia — Eternal Return SKIN ARCHIVE">
+  <title>実装待ちランキング | kaworia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="topbar-brand" href="/" aria-label="kaworia トップ">kaworia</a>
+
+    <nav class="top-nav" aria-label="メインナビゲーション">
+      <a href="https://kaworia.com/Skins/">
+        <span class="material-symbols-rounded" aria-hidden="true">grid_view</span>
+        <span>SKIN LIST</span>
+      </a>
+
+      <a href="./" class="active">
+        <span class="material-symbols-rounded" aria-hidden="true">leaderboard</span>
+        <span>RANKING</span>
+      </a>
+
+      <a href="/contact/">
+        <span class="material-symbols-rounded" aria-hidden="true">mail</span>
+        <span>CONTACT</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-heading">
+      <p class="eyebrow">ETERNAL RETURN / RANKING</p>
+      <h1>実装待ちランキング</h1>
+      <p class="description">
+        最後のスキン実装から、どれくらいの日数が経過しているかを確認できます。
+      </p>
+    </section>
+
+    <section class="filter-panel">
+      <label class="field">
+        <span>キャラクターを検索</span>
+        <input
+          id="rankingSearch"
+          type="search"
+          placeholder="キャラクター名"
+        >
+      </label>
+
+      <p class="help-text">
+        最後にスキンが実装された日からの経過日数が長い順です。
+      </p>
+    </section>
+
+    <div class="result-bar">
+      <span id="rankingCount">0キャラクター</span>
+      <span id="rankingDate"></span>
+    </div>
+
+    <section id="rankingList" class="ranking-list"></section>
+
+    <p id="rankingEmpty" class="empty-message" hidden>
+      該当するキャラクターがありません。
+    </p>
+
+    <p class="help-text">
+      ※まだ先の実装予定のスキンがあるキャラクターは「0日経過」とされます。
+    </p>
+  </main>
+
+  <footer class="bottombar">
+    <small>
+      kawaiiOTPが制作・管理しているEternal Returnの有志サイトです。<br>
+      <strong>引用内容/スクリーンショット/画像の権利につきましては、権利者様へ帰属します。</strong><br>
+      <strong>©2020 NIMBLE NEURON CORPORATION. ALL RIGHTS RESERVED.</strong>
+    </small>
+  </footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/ranking.js"></script>
+
+</body>
+</html>
