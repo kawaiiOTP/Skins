@@ -18,10 +18,34 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
 
+  <!-- ランキング専用CSS -->
   <link rel="stylesheet" href="../css/style.css">
+
+  <!-- KAWORIA共通CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- ドロップダウンメニュー修正 -->
+  <style>
+    nav.kaworia-menu-dropdown {
+      display: block;
+      flex-direction: initial;
+      flex-wrap: initial;
+      gap: 0;
+      width: 280px;
+      max-width: calc(100vw - 24px);
+    }
+
+    nav.kaworia-menu-dropdown > a,
+    nav.kaworia-menu-dropdown > span {
+      display: block;
+      width: 100%;
+    }
+  </style>
 </head>
+
 <body>
 
+  <!-- ヘッダー -->
   <header class="topbar">
     <a class="topbar-brand" href="/" aria-label="kaworia トップ">kaworia</a>
 
@@ -43,6 +67,10 @@
     </nav>
   </header>
 
+  <!-- シーズンカード -->
+  <div id="season-card-root"></div>
+
+  <!-- メインコンテンツ -->
   <main class="container">
     <section class="page-heading">
       <p class="eyebrow">ETERNAL RETURN / RANKING</p>
@@ -83,6 +111,7 @@
     </p>
   </main>
 
+  <!-- フッター -->
   <footer class="bottombar">
     <small>
       kawaiiOTPが制作・管理しているEternal Returnの有志サイトです。<br>
@@ -91,6 +120,13 @@
     </small>
   </footer>
 
+  <!-- 共通メニュー -->
+  <script src="/js/menu.js" defer></script>
+
+  <!-- シーズンカード -->
+  <script src="/js/season-card.js" defer></script>
+
+  <!-- ランキングデータ・機能 -->
   <script src="../js/data.js"></script>
   <script src="../js/ranking.js"></script>
 
