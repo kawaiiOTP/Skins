@@ -988,4 +988,33 @@ select:focus {
   background-color: #EEEEEE;
   color: #222222;
 }
+/* ========================================
+   KAWORIA 共通メニュー表示の修正
+======================================== */
 
+.topbar nav,
+.topbar .top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 26px;
+  flex-wrap: nowrap;
+  width: auto;
+}
+
+.topbar nav a,
+.topbar .top-nav a {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* スマートフォン */
+@media (max-width: 520px) {
+  .topbar nav,
+  .topbar .top-nav {
+    width: auto;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+}
