@@ -19,12 +19,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
 
+  <!-- スキン一覧専用CSS -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- サイト共通CSS（メニュー・シーズンカード） -->
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
 
-  <!-- 上部固定ヘッダー -->
+  <!-- =========================
+       上部固定ヘッダー
+  ========================== -->
+
   <header class="topbar">
 
     <a class="topbar-brand" href="/" aria-label="kaworia トップ">
@@ -53,6 +60,17 @@
   </header>
 
 
+  <!-- =========================
+       シーズン情報カード
+  ========================== -->
+
+  <div id="season-card-root"></div>
+
+
+  <!-- =========================
+       メインコンテンツ
+  ========================== -->
+
   <main class="container">
 
     <section class="page-heading">
@@ -68,7 +86,10 @@
     </section>
 
 
-    <!-- 検索・絞り込み -->
+    <!-- =========================
+         検索・絞り込み
+    ========================== -->
+
     <section class="filter-panel">
 
       <label class="field">
@@ -125,7 +146,10 @@
     </section>
 
 
-    <!-- 件数・読み込み -->
+    <!-- =========================
+         件数・読み込み
+    ========================== -->
+
     <div class="result-bar">
 
       <span id="resultCount">0件</span>
@@ -141,7 +165,10 @@
     </div>
 
 
-    <!-- スキン一覧 -->
+    <!-- =========================
+         スキン一覧
+    ========================== -->
+
     <section
       id="skinGrid"
       class="skin-grid"
@@ -153,7 +180,10 @@
     </p>
 
 
-    <!-- 画像拡大ダイアログ -->
+    <!-- =========================
+         画像拡大ダイアログ
+    ========================== -->
+
     <dialog id="imageDialog" class="image-dialog">
 
       <button
@@ -171,7 +201,10 @@
   </main>
 
 
-  <!-- 下部固定フッター -->
+  <!-- =========================
+       下部固定フッター
+  ========================== -->
+
   <footer class="bottombar">
 
     <small>
@@ -183,7 +216,17 @@
   </footer>
 
 
-  <!-- JavaScript：既存のまま -->
+  <!-- =========================
+       JavaScript
+  ========================== -->
+
+  <!-- 共通メニュー -->
+  <script src="/js/menu.js" defer></script>
+
+  <!-- シーズン情報カード -->
+  <script src="/js/season-card.js" defer></script>
+
+  <!-- スキン一覧専用JavaScript -->
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
 
