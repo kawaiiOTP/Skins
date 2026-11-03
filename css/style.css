@@ -1018,3 +1018,21 @@ select:focus {
     flex-wrap: nowrap;
   }
 }
+/* ========================================
+   KAWORIA ドロップダウンメニュー修正
+======================================== */
+
+nav.kaworia-menu-dropdown {
+  display: block;
+  flex-direction: initial;
+  flex-wrap: initial;
+  gap: 0;
+  width: 280px;
+  max-width: calc(100vw - 24px);
+}
+
+nav.kaworia-menu-dropdown > a,
+nav.kaworia-menu-dropdown > span {
+  display: block;
+  width: 100%;
+}
