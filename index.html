@@ -26,7 +26,8 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
+<!-- スキン一覧専用クラス：ページ全体のスクロールを許可 -->
+<body class="skins-page">
 
   <!-- =========================
        上部固定ヘッダー
@@ -94,8 +95,11 @@
 
       <label class="field">
         <span>キーワード</span>
-        <input id="search" type="search"
-          placeholder="キャラクター名・スキン名・シリーズ名">
+        <input
+          id="search"
+          type="search"
+          placeholder="キャラクター名・スキン名・シリーズ名"
+        >
       </label>
 
       <div class="filter-grid">
@@ -138,8 +142,11 @@
 
       </div>
 
-      <button id="resetFilters" class="button button-light"
-        type="button">
+      <button
+        id="resetFilters"
+        class="button button-light"
+        type="button"
+      >
         条件をリセット
       </button>
 
